@@ -5,8 +5,14 @@
 	<title>iframe</title>
 </head>
 <body>
+	<button id="b2">reload</button>
 	<script>
 		document.write(Math.random())
+		b2.onclick = function(){
+			window.opener.location.reload()
+			window.close()
+		}
 	</script>
+
 </body>
 </html>
