@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div></div>
+<script>
+	for(var i=0;i<5;i++){			
+		function fn(i){
+			setTimeout(function(){
+			 console.log('delayer:' + i );
+			}, 0);
+		}
+		fn(i)
+		console.log(i);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自制JQuery</title>
+	<style>
+		.xxx{
+			background-color: red;
+		}
+		.active{
+			background: green;
+		}
+		.x{
+			height: 100px;
+			border: 1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="xxx x" >
+		<p>div test 1</p>
+	</div>
+	<div class="xxx x" >
+		<p>div test 2</p>
+	</div>
+
+	<script src="./j.js"></script>
+	<script>
+		var $xxx = $('.xxx')
+		// $xxx.on('click', function(){
+		// 	// $xxx.add('active')
+		// 	// $xxx.remove('active')
+		// 	// $xxx.toggleClass('active')
+		// 	// $xxx.text('hello')
+		// 	// $xxx.html('<del>1234</del>')
+		// })
+		// var textList = $xxx.text()
+		// var text = textList[0]
+		// console.log(text)
+		// var htmlArray = $xxx.html()
+		// console.log(htmlArray)
+
+		//链式调用
+		// $xxx.addClass('active').html('1111').on('click',function(){
+		// 	$xxx.toggleClass('active')
+		// })
+
+		//可多个连续添加多个class
+		// $xxx
+		// 	.addClass('active')
+		// 	.addClass('active')
+		// 	.addClass('active')
+		// 	.addClass('active')
+		// 	.addClass('active')
+		// 	.addClass('active')
+		// 	.addClass('active')
+
+		// console.log($xxx.find('p'))
+		$p = $xxx.find('p')
+		$p.on('click',function(){
+			console.log('点击了')
+		})
+
+		console.log($xxx.find('p').end() === $xxx )
+		$xxx.find('p').addClass('active').end().removeClass('xxx')
+
+		// js写代码的时候 完全不用this。this 是个语法糖 可以更方便的写代码
+
+	</script>
+</body>
+</html>

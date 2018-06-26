@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业1</title>
+</head>
+<body>
+	<script>
+		var fnArr = [];
+		// 方法一 合并代码
+		for (var i = 0; i < 10; i ++) {
+		    fnArr[i] =  function(i){
+		    	return function(){
+		    		return i
+		    	}
+				}(i)
+		}
+	    // 方法二 展开代码
+		for (var i = 0; i < 10; i ++) {
+			function temp(j){
+				return function(){
+					return j
+				}
+			}
+			var fn = temp(i)
+			fnArr[i] = fn
+		}
+
+		console.log( fnArr[3]() );  //
+	</script>
+</body>
+</html>
