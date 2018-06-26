@@ -10,7 +10,8 @@ window.$ = function(){
 
 $.bom = {
 	openAtCenter: function(width, height, url){
-		window.open(url, '_blank', 'width=${width}px,height=${height}px')
+		let st = 'width='+width+'px,height='height'}px'
+		window.open(url, '_blank', st)
 	}
 }
 
